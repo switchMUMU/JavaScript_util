@@ -1,6 +1,6 @@
 # JavaScript_util
 
-#Int64
+# Int64
 Int64 for JavaScript（cocos creator）
 let Int64 = require('Int64');
 
@@ -15,13 +15,13 @@ get64Number(id) {
     }
 },
 	
-#Dictionary
+# Dictionary
 Dictionary for JavaScript（cocos creator）
 
 let Dictionary = require("Dictionary");
 let dictionary = new Dictionary();
 
-#Event
+# Event
 ### addEventKey
 UpdateDiamondNumberEvent: genEventKey(),
 	
