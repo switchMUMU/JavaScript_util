@@ -1,6 +1,6 @@
 # JavaScript_util
 
-#####Int64
+#Int64
 Int64 for JavaScript（cocos creator）
 let Int64 = require('Int64');
 
@@ -15,17 +15,17 @@ get64Number(id) {
     }
 },
 	
-#####Dictionary
+#Dictionary
 Dictionary for JavaScript（cocos creator）
 
 let Dictionary = require("Dictionary");
 let dictionary = new Dictionary();
 
-#####Event
-# addEventKey
+#Event
+### addEventKey
 UpdateDiamondNumberEvent: genEventKey(),
 	
-# addEvent
+### addEvent
 initEvent() {
     var that = this;
     this._diamond_num_handler = Global.EventManager.on(Global.EventEnum.UpdateDiamondNumberEvent, (rs) => {
@@ -44,10 +44,10 @@ removeEvent() {
 onDestroy(msg) {
     this.removeEvent();
 },
-# useEvent
+### useEvent
 Global.EventManager.dispatch(Global.EventEnum.UpdateDiamondNumberEvent, data);
 
-#####Net
+#Net
 # Http
 let Http = require("http");
 let http = new Http();
@@ -66,7 +66,7 @@ http.post(Global.GameConfig.AUTH_URL, params, (msg) => {
 })
 
 # Socket1
-# connect
+### connect
 doLinkGameSever: function (addr, port) {
 	addr = addr || this._login_model.getServerInfo().addr;
 	port = port || this._login_model.getServerInfo().port;
@@ -82,7 +82,7 @@ doLinkGameSever: function (addr, port) {
 		}
 	})
 },
-# require
+### require
 Global.Session.send(Proto.M_Role.getRoleInfo, null, (msg) => {
     cc.log(JSON.stringify(msg));
     if (msg.error == require('errorCode').SystemError.success) {
@@ -92,7 +92,7 @@ Global.Session.send(Proto.M_Role.getRoleInfo, null, (msg) => {
         viewManager.showErrorMsg(msg.error)
     }
 })
-#response
+### response
 initEvent(){
     var handle;
     handle = Global.Session.on(Proto.M_Role.handleGoldUpdate.id, this.handleGoldUpdate, this)
