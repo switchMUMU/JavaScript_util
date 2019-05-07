@@ -113,3 +113,4 @@ onDestroy(msg) {
 },
 # Socket2
 protocol buffers -> ProtoName List
+pbjs -t static-module -w commonjs -o ../assets/Script/proto.js ../protocol/*.proto
